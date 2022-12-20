@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>介绍</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<style>
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			body{
+				width: 640px;
+				height: 1030px;
+				background-image: url('img/background7.png');
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.hua7{
+				position: absolute;
+				width: 300px;
+				left: 340px;
+				top: 315px;
+				cursor: pointer;
+			}
+			.home{
+				position: absolute;
+				width: 40px;
+				left: 320px;
+				top: 990px;
+			}
+			.left7{
+				position: absolute;
+				width: 40px;
+				left: 160px;
+				top: 980px;
+			}
+			.right7{
+				position: absolute;
+				width: 40px;
+				left: 480px;
+				top: 980px;
+			}
+		</style>
+		<script>
+			var a=1;
+			function left(){
+				a--;
+				if(a<1){
+					a=7;
+				}
+				document.getElementById("zhanshi").src=("img/hua"+a+".png");
+			}
+			function right(){
+				a++;
+				if(a>7){
+					a=1;
+				}
+				document.getElementById("zhanshi").src=("img/hua"+a+".png");
+			}
+		</script>
+	</head>
+	<body>
+		<img src="img/hua1.png" class="hua7" id="zhanshi"/>
+		<a href="index-1.html"><img src="img/home.png" class="home"/></a>
+		<img src="img/left7.png" class="left7" onclick="left()"/>
+		<img src="img/right7.png" class="right7" onclick="right()"/>
+	</body>
+</html>
